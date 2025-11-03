@@ -285,19 +285,15 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 		const vscode = acquireVsCodeApi();
 
 		// Level 1 word bank (only uses: a, r, s, t, n, e, i, o)
-		const level1Words = [
-			'rest', 'nest', 'test', 'sent', 'rent', 'tens', 'nets', 'tans', 'ants',
-			'seat', 'sear', 'near', 'neat', 'tear', 'rate', 'sate', 'nears', 'tears',
-			'rotate', 'senate', 'eason', 'train', 'strain', 'retain', 'attire',
-			'nose', 'rose', 'stone', 'tones', 'noter', 'snore', 'store', 'aeons',
-			'irons', 'inter', 'insert', 'senior', 'rinse', 'resin', 'siren',
-			'inert', 'sitter', 'trite', 'onset', 'notes', 'arsons', 'reason',
-			'treason', 'senator', 'senorita', 'instate', 'satire', 'attain',
-			'air', 'are', 'art', 'ate', 'ear', 'eat', 'era', 'ion', 'ire', 'its',
-			'net', 'nit', 'not', 'oar', 'oat', 'one', 'ore', 'ran', 'rat', 'reo',
-			'roe', 'rot', 'sat', 'sea', 'set', 'sin', 'sir', 'sit', 'son', 'sot',
-			'tan', 'tar', 'tea', 'ten', 'tie', 'tin', 'toe', 'ton', 'eon'
-		];
+        const level1Words = [
+            "anoestri", "arsonite", "notaries", "notarise", "rosinate", "senorita",
+            "anestri", "antsier", "aroints", "atoners", "atonies", "erasion", "instore", "nastier", "norites", "oariest", "oestrin", "orients", "osteria", "otaries", "otarine", "ratines", "rations", "resiant", "retains", "retinas",
+            "airest", "antres", "aorist", "ariose", "arisen", "aristo", "aroint", "arseno", "arsine", "arsino", "arties", "artsie", "astern", "astone", "atoner", "atones", "estrin", "inerts", "insert", "instar",
+            "aeons", "aeros", "aesir", "airns", "airts", "anise", "antes", "antis", "antre", "arent", "arets", "ariot", "arise", "arose", "arson", "artis", "aster", "astir", "atone", "earns",
+            "aeon", "aero", "aine", "ains", "aint", "airn", "airs", "airt", "aits", "anes", "anis", "ante", "anti", "ants", "ares", "aret", "aris", "arse", "arti", "arts",
+            "aes", "ain", "air", "ais", "ait", "ane", "ani", "ant", "are", "ars", "art", "ate", "ats", "ean", "ear", "eas", "eat", "ens", "eon", "era",
+            "ae", "ai", "an", "ar", "as", "at", "ea", "en", "eo", "er", "es", "et", "in", "io", "is", "it", "na", "ne", "no", "oe"
+        ];
 
 		let words = [];
 		let currentWordIndex = 0;
