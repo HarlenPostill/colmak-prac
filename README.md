@@ -1,54 +1,54 @@
-# colmak-prac README
+# colmak-prac
 
-This is the README for your extension "colmak-prac". After writing up a brief description, we recommend including the following sections.
+colmak-prac is a small VS Code extension that helps you practice the Colemak keyboard layout while you code. It provides a sidebar for guided practice and an inline practice mode you can start from an editor.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Sidebar "Typing Practice" webview with lessons and progress controls.
+- Inline practice mode that opens an editor-like practice area so you can practice without leaving your workspace.
+- Commands to start practice and reset progress.
+- Optional keybinding to quickly start inline practice: Ctrl+Shift+K (Windows/Linux) or Cmd+Shift+K (macOS).
 
-For example if there is an image subfolder under your extension project workspace:
+## Quick Start
 
-\!\[feature X\]\(images/feature-x.png\)
+- Open the Command Palette (Ctrl/Cmd+Shift+P) and run:
+  - "Colemak: Start Inline Practice" to begin an inline session.
+  - "Reset Typing Practice" to clear progress.
+- Or press the keybinding: Ctrl+Shift+K (Windows/Linux) or Cmd+Shift+K (macOS) when the editor has focus.
+- Use the "Colemak Practice" activity bar icon to open the sidebar view for lessons and settings.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Commands
+
+Provided commands (also listed in package.json):
+- `colmak-prac.startInlinePractice` — Start an inline typing practice session.
+- `colmak-prac.resetPractice` — Reset the current practice progress.
+- `colmak-prac.openInlineEditor` — Open the inline practice editor (used internally / by the extension).
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code (matching the engine version in package.json).
+- No external dependencies are required.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+This extension does not add configuration settings by default. Future versions may expose lesson/feedback settings.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Progress syncing across machines is not supported.
+- The extension relies on VS Code webviews for the sidebar; some environments with restricted webviews may affect the UI.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
+- Initial release: Sidebar practice view + inline practice mode and basic commands.
 
-Initial release of ...
+## Contributing & Issues
 
-### 1.0.1
+- If you find bugs or want to request features, please open an issue in the repository where this extension is hosted.
+- Include VS Code version and steps to reproduce when reporting bugs.
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
+Enjoy practicing Colemak!
 ## Following extension guidelines
 
 Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.

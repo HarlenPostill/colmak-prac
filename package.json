@@ -3,13 +3,22 @@
   "displayName": "colmak prac",
   "description": "A typing practice assistent directly intergrated into VS Code to get your Colmak keyboard layout practice in anytime while coding!",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harlenPostill/colmak-prac.git"
+  },
+  "publisher": "harlenpostill",
   "engines": {
-    "vscode": "^1.104.2"
+    "vscode": "^1.105.0"
   },
   "categories": [
     "Other"
   ],
   "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:colmak-prac.startInlinePractice",
+    "onView:colmakPractice.sidebar"
+  ],
   "contributes": {
     "commands": [
       {
