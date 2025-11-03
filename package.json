@@ -15,6 +15,18 @@
       {
         "command": "colmak-prac.resetPractice",
         "title": "Reset Typing Practice"
+      },
+      {
+        "command": "colmak-prac.startInlinePractice",
+        "title": "Colemak: Start Inline Practice"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "colmak-prac.startInlinePractice",
+        "key": "ctrl+shift+k",
+        "mac": "cmd+shift+k",
+        "when": "editorTextFocus"
       }
     ],
     "viewsContainers": {

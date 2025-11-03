@@ -2,6 +2,8 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import { SidebarProvider } from './SidebarProvider';
+import { InlineEditorProvider } from './InlineEditorProvider';
+import { InlinePracticeController } from './InlinePracticeController';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -23,6 +25,23 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.commands.registerCommand('colmak-prac.resetPractice', () => {
 			sidebarProvider.resetPractice();
+		})
+	);
+
+	// Register inline editor command
+	context.subscriptions.push(
+		vscode.commands.registerCommand('colmak-prac.openInlineEditor', () => {
+			InlineEditorProvider.createOrShow(context.extensionUri);
+		})
+	);
+
+	// Register inline practice command
+	const inlineController = new InlinePracticeController();
+	context.subscriptions.push(inlineController);
+	
+	context.subscriptions.push(
+		vscode.commands.registerCommand('colmak-prac.startInlinePractice', () => {
+			inlineController.startPractice();
 		})
 	);
 }
